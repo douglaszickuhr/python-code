@@ -1,0 +1,19 @@
+class IceCreamMachine:
+
+    def __init__(self, ingredients, toppings):
+        self.ingredients = ingredients
+        self.toppings = toppings
+
+    def scoops(self):
+        combination = list()
+        for ingredient in self.ingredients:
+            for topping in self.toppings:
+                combination.append([ingredient, topping])
+
+        return tuple(combination)
+
+
+machine = IceCreamMachine(["vanilla", "chocolate", "strawberry"], ["chocolate sauce"])
+print(machine.scoops())
+# should print[['vanilla', 'chocolate sauce'], ['chocolate', 'chocolate sauce']]
+
