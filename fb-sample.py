@@ -55,7 +55,7 @@ centered_average([1, 1, 5, 5, 10, 8, 7]) → 5
 centered_average([-10, -4, -2, -4, -2, 0]) → -3"""
 
 def centered_average(nums):
-    total = sum(nums[1:len(nums)-1])
+    return (sum(nums) - max(nums) - min(nums))//(len(nums)-2)
     # for i in range(len(nums)-1):
     #     print("Number: {}".format(nums[i]))
     #     if i > 0:
@@ -107,10 +107,26 @@ def in1to10(n, outside_mode):
     return x
 
 def sum13(nums):
-  total = 0
-  for i in range(len(nums)):
-    if nums[i] != 13:
-      if nums[i-1] != 13:
-        total += nums[i]
-  return total
+    total = 0
+    for i in range(len(nums)):
+        if nums[i] != 13:
+            if nums[i-1] != 13 or i == 0:
+                total += nums[i]
+    return total
 
+
+def sum67(nums):
+    out = 0
+    if 6 in nums and 7 in nums:
+        ignore_from = nums.index(6)
+        ignore_to = nums.index(7)
+        print('Ignoring from {0} to {1}'.format(ignore_from,ignore_to))
+        for i in range(len(nums)):
+            print('Current index: {}'.format(i))
+            if i < ignore_from or i > ignore_to:
+                print('Current number: {}'.format(nums[i]))
+                out += nums[i]
+    else:
+        out = sum(nums)
+
+    return out
