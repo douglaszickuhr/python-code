@@ -19,7 +19,7 @@ def find_pairs_with_given_difference(arr, k):
     return out
 
 
-# Optmised solution
+# Optimised solution
 # Space: O(N log(N)
 # Time: O(N log(N)
 def find_pairs_with_given_difference(arr, k):
