@@ -20,8 +20,8 @@ def find_pairs_with_given_difference(arr, k):
 
 
 # Optimised solution
-# Space: O(N log(N)
-# Time: O(N log(N)
+# Space: O(N)
+# Time: O(N log(N)) worst scenario
 def find_pairs_with_given_difference(arr, k):
     if k == 0:
         return []
