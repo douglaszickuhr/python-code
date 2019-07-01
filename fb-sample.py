@@ -3,11 +3,12 @@ Write a function that returns the elements on odd positions (0 based) in a list
 """
 
 def solution_1(input):
-    output = list()
-    for position in range(len(input)):
-        if position % 2 != 0:
-            output.append(input[position])
-    return output
+    return [num for num in input if num % 2 != 0]
+    # output = list()
+    # for position in range(len(input)):
+    #     if position % 2 != 0:
+    #         output.append(input[position])
+    # return output
 
 
 assert solution_1([0,1,2,3,4,5]) == [1,3,5]
@@ -18,6 +19,7 @@ assert solution_1([1,-1,2,-2]) == [-1,-2]
 Write a function that returns the cumulative sum of elements in a
 list
 """
+# If numpy is available
 def solution_2(input):
     output = list()
 
